@@ -1,0 +1,139 @@
+@import url("(https://fonts.google.com/specimen/Inter)");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+main {
+  background-image: url(../images/pattern-curve.svg);
+  background-size: auto;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+section {
+  max-width: 1600px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+article {
+  grid-column: 1fr;
+  place-self: center;
+}
+
+article img {
+  margin: -40px 75px;
+}
+
+article p {
+  font-size: 32px;
+  line-height: 1.6em;
+  color: #202046;
+  font-weight: 300;
+  margin-bottom: 30px;
+  max-width: 650px;
+}
+
+article .client {
+  font-size: 16px;
+  color: #202046;
+  font-weight: 700;
+}
+
+article .client span {
+  margin-left: 5px;
+  color: #babacf;
+  font-weight: 500;
+}
+
+.slider {
+  grid-column: 1fr;
+  background-image: url(../images/pattern-bg.svg);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slider-controls {
+  position: absolute;
+  background-color: white;
+  border-radius: 50px;
+  width: 110px;
+  padding: 17px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -25px 0px 0px 50px;
+  -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-clear {
+  background: none;
+  border: none;
+}
+
+.client-image {
+  display: none;
+}
+
+.testimonial {
+  display: none;
+}
+
+.client {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  * {
+    text-align: center;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .grid article {
+    grid-row-start: 2;
+  }
+  .grid article p {
+    font-size: 24px;
+  }
+  .grid article img {
+    width: 75px;
+    height: auto;
+  }
+  .grid .slider {
+    grid-row-start: 1;
+    margin-bottom: 90px;
+  }
+  .grid .slider .slider-controls {
+    margin-left: 150px;
+  }
+}
